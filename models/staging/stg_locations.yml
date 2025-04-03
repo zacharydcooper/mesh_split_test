@@ -28,3 +28,9 @@ models:
         data_type: timestamp_ntz
         data_tests:
           - not_null
+      - name: likeability_score
+        description: Score of the location based on how much people like it
+        data_type: text
+        data_tests:
+          - not_null
+
