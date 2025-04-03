@@ -9,13 +9,22 @@ models:
     columns:
       - name: location_id
         description: The unique key for each location.
-        tests:
+        data_tests:
           - not_null
           - unique
         data_type: text
       - name: location_name
+        description: The name of the location.
         data_type: text
+        data_tests:
+          - not_null
       - name: tax_rate
+        description: The tax rate applicable to the location.
         data_type: float
+        data_tests:
+          - not_null
       - name: opened_at
+        description: The date the location was opened, truncated to the day.
         data_type: timestamp_ntz
+        data_tests:
+          - not_null

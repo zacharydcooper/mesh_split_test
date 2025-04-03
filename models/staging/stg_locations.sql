@@ -22,6 +22,8 @@ renamed as (
         ---------- numerics
         tax_rate,
 
+        'Fun' as likeability_score,
+
         ---------- timestamps
         {{ dbt.date_trunc('day', 'opened_at') }} as opened_at
 
