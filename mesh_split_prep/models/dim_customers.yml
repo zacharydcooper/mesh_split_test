@@ -1,0 +1,17 @@
+version: 2
+models:
+- name: dim_customers
+  description: This model serves as a dimension table for customer data, providing
+    a comprehensive view of customer information sourced from the upstream staging
+    table 'stg_customers'. It is used to facilitate customer-related analyses and
+    reporting.
+  columns:
+  - name: customer_id
+    description: A unique identifier for each customer.
+    data_tests:
+      - unique
+      - not_null
+  - name: customer_name
+    description: The full name of the customer.
+    data_tests:
+      - not_null
