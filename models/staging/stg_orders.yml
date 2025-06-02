@@ -17,6 +17,10 @@ models:
         data_type: text
       - name: customer_id
         data_type: text
+        constraints:
+          - type: foreign_key
+            to: ref('stg_customers')
+            to_columns: customer_id
       - name: order_total
         data_type: number
       - name: tax_paid
