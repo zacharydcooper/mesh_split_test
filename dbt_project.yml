@@ -5,9 +5,9 @@ config-version: 2
 profile: "snowflake"
 require-dbt-version: ">=1.6.0"
 
-model-paths: ["models"]
+model-paths: ["models", "project_split/models"]
 analysis-paths: ["analyses"]
-test-paths: ["tests"]
+test-paths: ["tests", "project_split/tests"]
 seed-paths: ["jaffle-data"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
